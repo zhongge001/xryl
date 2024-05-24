@@ -1,0 +1,54 @@
+
+.zhongjiang{
+  padding-top: 52px;
+  text-align: center;
+  height: 400px;
+  /* background-color: #fff; */
+}
+
+.zhongjiang .swallper{
+  position: relative;
+  z-index: -1;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    /* background-color: pink; */
+}
+
+.zhongjiang .swallper .shiping_1{
+  height: 400px;
+}
+
+.cidaohao{
+  height: 25px;
+  /* background-color: pink; */  
+  padding-bottom: 10px;
+}
+
+.cidaohao ul li{
+  float: left;
+  /* padding-top: 18px; */
+  padding-left: 20px;
+  padding-bottom: 10px;
+
+}
+
+.cidaohao ul li a:hover{
+  padding-bottom: 5px;
+  color: #ffffff;
+  border-bottom: 1px solid #fff;
+}
+
+.jihe{
+
+}
+
+.jihe li{
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 230px;
+  height: 200px;
+  background-color: pink;
+  box-shadow:0 0 10px #f23434;
+}

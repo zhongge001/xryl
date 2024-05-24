@@ -1,0 +1,168 @@
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-image: url(../shiping/04.gif);
+    background-position:center;
+    /* 取消图片平铺 */
+    /* background-repeat: no-repeat;  */
+    /* 设置背景图片在浏览器中固定 */
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+}
+/* ##################################### */
+.shortcut {
+    display: flex;
+    /* 元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。 */
+    position: fixed;
+    width: 100%;    
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    box-shadow: 0 4px 8px rgba(0,0,0, .3);
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.tubiao{
+    float: left;
+    width: 67px;
+    height: 55px;
+    background-image: url(../img/th.gif);
+    background-position: -16px 0;
+}
+
+.shortcut .wrapper ul{
+    display: flex;
+    float: right;
+    list-style-type: none;
+}
+
+.shortcut .wrapper li {
+    float: left;
+    
+    line-height: 52px;
+}
+
+.shortcut .wrapper a {
+    padding: 0 16px;
+    border-right: 1px solid #737373;
+    font-size: 14px;
+    color: #171717;
+}
+
+.shortcut .wrapper a:hover{
+    padding-bottom: 10px;
+    border-bottom:1px solid #ffffff;
+}
+
+.shortcut a:hover{
+    color: #d4d4d4;
+}
+
+/* 去除右边第一个的竖线 */
+.shortcut .wrapper li:last-child a{
+    border-right: none;
+}
+
+/* 33333333333333333333333333333333333333333333333333333 */
+
+.header{
+    padding-top: 52px;
+    text-align: center;
+    height: 400px;
+}
+
+h4{
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 20px;
+    text-align: 14px;
+    color: #ffffff;
+}
+
+/* ##################################################### */
+.bonner {
+    height: 270px;
+    margin-top: 30px;
+    /* border-radius: 2%; */
+}
+
+.bonner ul li:nth-child(2n){
+    float: right;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 25px;
+}
+
+.bonner ul li:nth-child(2n-1){
+    float: left;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.car {
+    padding-top: 10px;
+}
+
+.car ul li{
+    width: 400px;
+    height: 300px;
+    float: right;
+    padding-right: 25px;
+    padding-top: 10px;
+
+}
+
+.qqq{
+    position: relative;
+    /* width: 1000px; */
+    height:250px;
+    border-top: 1px solid #ffffff;
+    
+}
+
+.car ol{
+    position: absolute;
+    left: 906px;
+    bottom: 24px;
+    width: 200px;
+    height: 10px;
+}
+
+.car ol li{
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255,.4);
+}
+
+.car ol .active{
+    background-color: #ffffff;
+}
+
+/* ###################################################### */
+
+.footer{
+    height: 100px;
+    background-color: #171717;
+}
+
+.footer .bottom {
+    padding: 30px 27%;
+}
+
+.footer .bottom p{
+    text-align: center;
+}
+
+.footer .bottom p a{
+    color: #595959;
+    padding-left: 10px;
+    font-size: 12px;
+}
+

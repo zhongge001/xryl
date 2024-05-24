@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏日幽灵</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <!-- 快捷导航 -->
+    <div class="shortcut">
+        <div class="wrapper">
+            <div class="tubiao"></div>
+            <ul class="">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">介绍</a></li>
+                <li><a href="#">作品推荐</a></li>
+                <li><a href="#">我们</a></li>
+                <li><a href="./denglu.html">登录</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- 中间部分 -->
+    <div class="header wrapper">
+        <div class="qqqq">      
+            <ul>
+                <li><a href="#"><img src="./img/02.png" alt=""></a></li>
+                <h4>精彩短片:</h4>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="wrapper bonner">
+        <ul>
+            <li><video width="450" loop controls src="./shiping/01.mp4"></video></li>
+            <li><video width="450" loop controls src="./shiping/02.mp4"></video></li>
+        </ul>
+    </div>
+    <div class="car wrapper clearfix">
+        <div class="qqq">
+        <ul>
+            <li><img width="400" src="./upigmges/01.jpg" alt="#"></li>
+        </ul>
+        <ol>
+            <li class="active"></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+            <li ></li>
+        </ol>
+        </div>
+    </div>
+    <!-- 其他内容 -->
+    <div>
+        
+    </div>
+    <!-- 尾部 -->
+    <div class="footer">
+        <div class="bottom">
+            <p>
+                <a href="#">关于我们</a>
+                <a href="#">帮助中心</a>
+                <a href="#">售后服务</a>
+                <a href="#">商务合作</a>
+                <a href="#">搜索推荐</a>
+                <a href="#">友情链接</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        j=1
+        const img=document.querySelector('.qqq ul img')
+        const e=document.querySelectorAll('.qqq ol li')
+        let n= setInterval(function(){
+                j++
+            if(j>5){
+                j=1
+            }
+            document.querySelector('.car .active').classList.remove('active')
+            document.querySelector(`.car ol li:nth-child(${j})`).classList.add('active')
+            img.src=`./upigmges/0${j}.jpg`
+
+            },1000)
+        img.addEventListener('mouseenter',function(){clearInterval(n)})
+        img.addEventListener('mouseleave',function(){
+            clearInterval(n)
+            n= setInterval(function(){
+                j++
+            if(j>=6){
+                j=1
+            }
+            img.src=`./upigmges/0${j}.jpg`
+            document.querySelector('.car .active').classList.remove('active')
+            document.querySelector(`.car ol li:nth-child(${j})`).classList.add('active')
+            },1000)
+        })
+        for (let i=0;i<=e.length;i++){
+            e[i].addEventListener('mouseenter',function(){
+                document.querySelector('.qqq ol .active').classList.remove('active')
+                this.classList.add('active')
+                img.src=`./upigmges/0${i+1}.jpg`
+                clearInterval(n)
+                j=i
+            })
+        }
+        
+        
+    </script>
+</body>
+</html>
